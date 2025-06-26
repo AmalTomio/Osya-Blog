@@ -1,0 +1,25 @@
+{
+    "blogs" : [
+        {
+            "id": 1,
+            "title": "Understanding JavaScript Closures",
+            "content": "JavaScript closures are a powerful feature that allows functions to retain access to their lexical scope even when the function is executed outside that scope. This is particularly useful for data encapsulation and creating private variables.",
+            "author": "Jane Doe",
+            "date": "2023-10-01"
+        },
+        {
+            "id": 2,
+            "title": "A Guide to CSS Grid Layout",
+            "content": "CSS Grid Layout is a two-dimensional layout system that provides a more efficient way to design web pages. It allows developers to create complex layouts with ease, using rows and columns.",
+            "author": "John Smith",
+            "date": "2023-10-05"
+        },
+        {
+            "id": 3,
+            "title": "Exploring React Hooks",
+            "content": "React Hooks are functions that let you use state and other React features without writing a class. They allow for cleaner and more functional component designs.",
+            "author": "Alice Johnson",
+            "date": "2023-10-10"
+        }
+    ]
+}
