@@ -1,9 +1,8 @@
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 import BlogList from "./BlogList";
 import useFetch from "./useFetch";
 
-//useEffect = re-render tapi better guna untuk certain data for render kat DOM (use dependencies [])
-//useEffect good for fetch data
+
 const Home = () => {
   const {
     data: blogs,

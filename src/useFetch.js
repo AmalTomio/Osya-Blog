@@ -1,4 +1,6 @@
 //Custom hook to fetch data from an API
+//useEffect = re-render tapi better guna untuk certain data for render kat DOM (use dependencies [])
+//useEffect good for fetch data
 import { useState, useEffect } from "react";
 
 const useFetch = (url) => {
