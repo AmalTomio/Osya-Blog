@@ -9,9 +9,6 @@ const useFetch = (url) => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    // setIsPending(true);
-    // setData(null);
-
     const controller = new AbortController(); // For cleanup
 
     setTimeout(() => {
@@ -31,6 +28,9 @@ const useFetch = (url) => {
           if (err.name !== "AbortError") {
             setError(err.message);
             setIsPending(false);
+          } else {
+            setIsPending(false);
+            setError(err.message);
           }
         });
     }, 500); // 1-second simulated delay
