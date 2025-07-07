@@ -10,7 +10,7 @@ const BlogDetails = () => {
     isPending,
   } = useFetch(`http://localhost:8000/blogs/${id}`);
   return (
-    //Display retrieve data from json
+        //Display retrieve data from json
     <div className="blog-details">
       {isPending && <div>Loading...</div>}
       {error && <div>{error}</div>}
