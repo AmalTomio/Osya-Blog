@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import useFetch from "./useFetch";
 const BlogDetails = () => {
   const { id } = useParams();
@@ -9,8 +9,17 @@ const BlogDetails = () => {
     error,
     isPending,
   } = useFetch(`http://localhost:8000/blogs/${id}`);
+  const navigate = useNavigate();
+
+  const handClick = () => {
+    fetch(`http://localhost:8000/blogs/${blog.id}`, {
+      method: "DELETE",
+    }).then(() => {
+      navigate("/");
+    });
+  };
   return (
-        //Display retrieve data from json
+    //Display retrieve data from json
     <div className="blog-details">
       {isPending && <div>Loading...</div>}
       {error && <div>{error}</div>}
@@ -19,6 +28,7 @@ const BlogDetails = () => {
           <h2>{blog.title}</h2>
           <p>Written by {blog.author}</p>
           <div>{blog.content}</div>
+          <button onClick={handClick}>Delete</button>
         </article>
       )}
     </div>
