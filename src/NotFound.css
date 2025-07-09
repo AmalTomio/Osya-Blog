@@ -1,0 +1,54 @@
+.not-found-container {
+  text-align: center;
+  padding: 80px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #f8f9fa, #e9ecef);
+  color: #333;
+  min-height: 100vh;
+}
+
+.not-found-code {
+  font-size: 120px;
+  font-weight: bold;
+  margin: 0;
+  color: #ff6b6b;
+  animation: pop 1s ease-in-out;
+}
+
+.not-found-title {
+  font-size: 32px;
+  margin: 10px 0;
+  color: #343a40;
+}
+
+.not-found-message {
+  font-size: 18px;
+  color: #6c757d;
+  margin-bottom: 30px;
+}
+
+.not-found-link {
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.not-found-link:hover {
+  background-color: #0056b3;
+}
+
+/* Animation */
+@keyframes pop {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

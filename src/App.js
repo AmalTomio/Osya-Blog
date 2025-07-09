@@ -3,6 +3,7 @@ import Home from "./Home.js";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import CreateForm from "./CreateForm.js";
 import BlogDetails from "./BlogDetails.js";
+import NotFound from "./NotFound.js";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
             <Route path="/create" element={<CreateForm />} />
             //Assign id to the blog details route
             <Route path="/blogs/:id" element={<BlogDetails />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
       </div>
